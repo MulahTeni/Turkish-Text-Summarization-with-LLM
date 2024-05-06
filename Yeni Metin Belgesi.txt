@@ -1,0 +1,3 @@
+https://paperswithcode.com/paper/mlsum-the-multilingual-summarization-corpus
+
+https://huggingface.co/datasets/mlsum
