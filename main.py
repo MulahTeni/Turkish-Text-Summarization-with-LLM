@@ -89,8 +89,13 @@ def main():
 
             train_losses.append(loss.item())
             progress_bar.set_description("Loss: %.3f" % (sum(train_losses) / len(train_losses)))
-
+            
+    print("Model state dictionary:", model.state_dict())
     os.makedirs('./model', exist_ok=True)
+    
+    print("Directory exists:", os.path.exists('./model'))
+    print("Directory is writable:", os.access('./model', os.W_OK))
+    
     torch.save(model.state_dict(), './model/model1.pth')
     print("Fine-Tuning Completed")
 
